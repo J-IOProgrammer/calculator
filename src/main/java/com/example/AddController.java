@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.service.AddService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
@@ -14,7 +15,9 @@ public class AddController {
 
         double firstNumber = Double.parseDouble(request.getParameter("n1"));
         double secondNumber = Double.parseDouble(request.getParameter("n2"));
-        double result = firstNumber + secondNumber;
+
+        AddService addService = new AddService();
+        double result = addService.add(firstNumber, secondNumber);
 
         //  For send the result we need the ModelAndView object, so we can pass data
         ModelAndView modelAndView = new ModelAndView();
