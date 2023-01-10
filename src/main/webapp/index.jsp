@@ -9,7 +9,7 @@
 </h1>
 <br/>
 
-<form action="add">
+<form action="addFunction">
     <input type="text" name="n1"><br><br>
     <input type="text" name="n2"><br><br>
     <input type="submit">
