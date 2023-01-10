@@ -8,7 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a><br>
 
 <form action="add">
     <input type="text" name="n1"><br><br>
