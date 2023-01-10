@@ -11,8 +11,8 @@
 <a href="hello-servlet">Hello Servlet</a><br>
 
 <form action="add">
-    <input type="text" name="t1"><br><br>
-    <input type="text" name="t2"><br><br>
+    <input type="text" name="n1"><br><br>
+    <input type="text" name="n2"><br><br>
     <input type="submit">
 </form>
 

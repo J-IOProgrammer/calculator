@@ -1,13 +1,27 @@
 package com.example;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AddController {
 
     @RequestMapping("/add")
-    public String add() {
-        return "display.jsp";
+    public ModelAndView add(HttpServletRequest request, HttpServletResponse response) {
+
+        double firstNumber = Double.parseDouble(request.getParameter("n1"));
+        double secondNumber = Double.parseDouble(request.getParameter("n2"));
+        double result = firstNumber + secondNumber;
+
+        //  For send the result we need the ModelAndView object, so we can pass data
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("display.jsp");
+        // Here the result in double quests is a label  for result object
+        modelAndView.addObject("result", result);
+
+        return modelAndView;
     }
 }
