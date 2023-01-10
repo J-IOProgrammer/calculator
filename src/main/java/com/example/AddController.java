@@ -5,16 +5,18 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AddController {
 
     @RequestMapping("/add")
-    public ModelAndView add(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView add(@RequestParam("n1") double firstNumber, @RequestParam("n2") double secondNumber,
+                            HttpServletRequest request, HttpServletResponse response) {
 
-        double firstNumber = Double.parseDouble(request.getParameter("n1"));
-        double secondNumber = Double.parseDouble(request.getParameter("n2"));
+//        double firstNumber = Double.parseDouble(request.getParameter("n1"));
+//        double secondNumber = Double.parseDouble(request.getParameter("n2"));
 
         AddService addService = new AddService();
         double result = addService.add(firstNumber, secondNumber);
