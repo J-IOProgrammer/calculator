@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<p>I am here</p>
+Result is : <%= request.getAttribute("result")%>
 
 </body>
 </html>
