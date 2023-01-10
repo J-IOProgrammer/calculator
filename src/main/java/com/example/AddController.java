@@ -21,7 +21,7 @@ public class AddController {
 
         //  For send the result we need the ModelAndView object, so we can pass data
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("display.jsp");
+        modelAndView.setViewName("display");
         // Here the result in double quests is a label  for result object
         modelAndView.addObject("result", result);
 
